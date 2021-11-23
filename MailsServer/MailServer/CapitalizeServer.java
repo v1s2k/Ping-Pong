@@ -38,7 +38,7 @@ public class CapitalizeServer {
         }
 
         public void run() {
-            System.out.println("Подключение: " + clientSocket);
+            System.out.println("Подключение к   : " + clientSocket);
             try {
                 out = new PrintWriter(clientSocket.getOutputStream(), true);
                 in = new Scanner(clientSocket.getInputStream());
