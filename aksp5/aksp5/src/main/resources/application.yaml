@@ -1,0 +1,44 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app
+    username: alex28
+    password: 2809Aa
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+      schema: classpath:org/springframework/session/jdbc/schema-postgresql.sql
+#   mail:
+#     host: smtp.yandex.ru
+#     username: ${SPRING_MAIL_USERNAME}
+#     password: ${SPRING_MAIL_PASSWORD}
+#     protocol: smtps
+#
+# mail:
+#   to: ${EMAIL_TO_SEND}
+
+dir:
+  result: src/main/resources/result
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+      domain: app

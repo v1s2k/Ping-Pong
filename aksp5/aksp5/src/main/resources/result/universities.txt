@@ -1,0 +1,2 @@
+id|university_name|creation_Date
+1|MIREA|3.02.1949
